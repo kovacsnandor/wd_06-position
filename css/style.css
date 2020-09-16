@@ -19,13 +19,15 @@ body {
 header {
     background: url("../pict/bg-header.jpg") no-repeat;
     height: 360px;
-    position: relative;
 }
 
+/* A nav doboz felakadjon a tetején */
 nav {
     background: rgba(190, 0, 0, 0.8);
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    position: sticky;
+    /* bottom: 0; */
+    top: 0;
     left: 0;
     right: 0;
 }
