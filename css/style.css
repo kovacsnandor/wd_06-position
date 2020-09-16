@@ -1,9 +1,60 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
 body {
     margin: 0;
+    font-family: Roboto, sans-serif;
     background: url("../pict/bg-body.jpg") no-repeat;
     background-size: cover;
 }
 * {
-	box-sizing: border-box
+    box-sizing: border-box
+}
+
+.wrapper{
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+header {
+    background: url("../pict/bg-header.jpg") no-repeat;
+    height: 360px;
+}
+
+nav {
+    background: rgba(190,0,0,0.8);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+}
+
+nav a:hover{
+    background: rgba(0,0,0,0.8);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+main {
+    background: white;
+    padding: 40px;
+}
+
+main p{
+    line-height: 1.5em;
 }
