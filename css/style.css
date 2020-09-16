@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+
 body {
     margin: 0;
     font-family: Roboto, sans-serif;
     background: url("../pict/bg-body.jpg") no-repeat;
     background-size: cover;
 }
+
 * {
     box-sizing: border-box
 }
 
-.wrapper{
+.wrapper {
     max-width: 800px;
     margin: 40px auto;
 }
@@ -21,7 +23,7 @@ header {
 }
 
 nav {
-    background: rgba(190,0,0,0.8);
+    background: rgba(190, 0, 0, 0.8);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -35,8 +37,8 @@ nav a {
     display: block;
 }
 
-nav a:hover{
-    background: rgba(0,0,0,0.8);
+nav a:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 nav ul {
@@ -45,8 +47,50 @@ nav ul {
     margin: 0;
 }
 
-nav li {
+/* csak a közvetlen leszármazottjaira vonatkozik */
+nav>ul>li {
     float: left;
+}
+
+
+/* Minden has-submenu fölé megyek legyen látható az alatta lévő*/
+nav .has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Minden has-submenu mellett legyen nyíl */
+nav .has-submenu::after {
+    content: "▾";
+    color: white;
+    position: absolute;
+    right: 12px;
+    top: 20px;
+}
+
+/* A nyílnak legyen több hely */
+nav .has-submenu>a {
+    padding-right: 35px;
+}
+
+nav .submenu a {
+    background: rgba(190, 0, 0, 1);
+    padding: 10px 20px;
+}
+
+/* hogy a submenu abszolut lehessen hozzá képest */
+nav .has-submenu {
+    position: relative;
+}
+
+/* almenu kerüljön a .has-submenu felirata alá  */
+nav .submenu {
+    position: absolute;
+    width: 220px;
+    display: none;
+}
+
+nav .submenu a:hover {
+    background: black;
 }
 
 .clearfix::after {
@@ -60,10 +104,10 @@ main {
     padding: 40px;
 }
 
-main p{
+main p {
     line-height: 1.5em;
 }
 
-main h1{
+main h1 {
     margin: 0;
 }
