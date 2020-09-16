@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
 body {
-	margin: 0;
+    margin: 0;
+    background: url("../pict/bg-body.jpg") no-repeat;
+    background-size: cover;
 }
 * {
 	box-sizing: border-box
